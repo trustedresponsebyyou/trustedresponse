@@ -6,5 +6,16 @@
   <div data-widget data-app="8e6e6e4o5o5e7u8e8eve"></div>
 <script src="//cdn.ringcaptcha.com/widget/v2/bundle.min.js"></script>
 <script type='text/javascript' charset='UTF-8' src="//cdn.ringcaptcha.com/widget/v2/bundle.min.js"></script>
+  
+  <script src='dist/jsOTP.min.js'></script>
+<script>
+// hotp
+var hotp = new jsOTP.hotp();
+var hmacCode = hotp.getOtp(<your OTP key>, <counter>);
+
+// totp
+var totp = new jsOTP.totp();
+var timeCode = totp.getOtp(<your OTP key>);
+</script>
 </body>
 </html>
